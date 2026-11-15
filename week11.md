@@ -4,9 +4,9 @@
 
 | 网站 | 方法 | 状态码 | Cookie |
 |---|---|---|---|
-| bilibili.com | GET | 200 | 有 |
-| zhihu.com |  |  |  |
-| 学校官网 |  |  |  |
+| bilibili.com |GET|200|有|
+| zhihu.com |GET|200|有|
+|https://www.whut.edu.cn/ |GET|200|有|
 
 ## 一个请求由哪几部分组成
 
