@@ -16,6 +16,9 @@
 
 （有就写，没有写「无」）
 
+curl 实测
+- 命令：`curl.exe https://httpbin.org/get`
 - origin：218.197.x.x（已打码）
 - User-Agent：curl/8.22.0
-- 注意：curl 不带 Cookie，所以服务器当我是陌生人
+- 方法：GET
+- 我注意到的：curl 不带 Cookie，所以服务器当我是陌生人
