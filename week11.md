@@ -48,3 +48,21 @@
 - 三个值：x-www-form-urlencoded（表单）、application/json（API）、multipart/form-data（文件）
 - 实验：同样的 name=test，改 Content-Type，一个进 form、一个进 json
 - 安全含义：客户端声明 ≠ 服务器验证 → 可伪造
+
+一个 HTTP 请求由四部分组成。
+
+第一部分是方法，它告诉服务器我要做什么。GET 是读，POST 是写。
+我这次用的是 POST，因为登录要在服务器上创建一个登录状态，属于写操作。
+
+第二部分是 URL，它告诉我请求的是哪个资源，由协议、域名、路径组成。
+比如 https://www.example.com/login：https 是协议，www.example.com 是域名，
+/login 是路径。
+
+第三部分是 Header，装的是附加信息，一行一个键值对。
+我认识了 Host、Cookie、Content-Type。其中 Cookie 的作用是识别身份，
+服务器靠它认出「你还是刚才那个人」。
+
+第四部分是 Body，只有 POST 请求通常才有，装的是我要提交的数据。
+比如登录时，Body 里是账号密码。
+
+四部分合起来，就是服务器收到的一封完整的信。
