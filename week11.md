@@ -78,3 +78,9 @@
 比如登录时，Body 里是账号密码。
 
 四部分合起来，就是服务器收到的一封完整的信。
+
+## httpbin 表单实验
+
+- 表单提交走 POST
+- 数据在 Body 里，地址栏看不到
+- Payload：customer=test&telephone=123
