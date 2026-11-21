@@ -84,3 +84,29 @@
 - 表单提交走 POST
 - 数据在 Body 里，地址栏看不到
 - Payload：customer=test&telephone=123
+
+## Cookie 预习
+
+- 不带 Cookie：返回空 → 服务器当我是陌生人
+- 带 name=test：服务器就认我叫 test
+- 带 role=admin：httpbin 会认（它只回显）；真实系统查 Session，伪造的查不到
+
+### 结论
+
+- Cookie 存在客户端，由服务器 Set-Cookie 下发，浏览器自动携带
+- 服务器不信任 Cookie 内容，只把它当钥匙去查自己的档案
+- 所以：明文 Cookie 可伪造（漏洞）；Session / 签名 不可伪造（安全）
+
+- # 错题本
+
+## 第 11 周小测
+
+1. 500 为什么在渗透测试里重要？
+   答：说明服务器处理了我的输入但崩了 → 可能没过滤 → 注入信号
+
+2. Cookie 什么情况下能被伪造？
+   答：服务器把权限/身份直接放在 Cookie 里且不校验；
+       Session ID 可猜；JWT 不验签
+
+3. curl 怎么发 JSON？
+   答：curl.exe -X POST URL -H "Content-Type: application/json" -d '{"k":"v"}'
