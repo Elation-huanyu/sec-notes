@@ -110,3 +110,31 @@
 
 3. curl 怎么发 JSON？
    答：curl.exe -X POST URL -H "Content-Type: application/json" -d '{"k":"v"}'
+
+# Week 12 · Cookie 与 Session
+
+## 实验：Set-Cookie 往返
+
+- 服务器发证：`set-cookie: name=test; Secure; Path=/`
+- 客户端存证：`-c cookies.txt` 写进文件（Netscape 格式，7 列）
+- 下次亮证：`-b cookies.txt` → 请求头带上 `Cookie: name=test`
+- 服务器认证：返回 `{"cookies":{"name":"test"}}`
+
+## 学到的四个属性
+
+- `Secure`：只在 HTTPS 下发送
+- `Path`：生效路径
+- `HttpOnly`：JS 读不到（防 XSS 偷 Cookie）
+- `SameSite`：跨站请求不带（防 CSRF）
+
+## Cookie vs Session（周三填）
+
+| | Cookie | Session |
+|---|---|---|
+| 存在哪 |  |  |
+| 谁生成 |  |  |
+| 能不能伪造 |  |  |
+
+## 我的疑问
+
+- 服务器拿到 `name=test` 之后，怎么知道这是哪个用户？
