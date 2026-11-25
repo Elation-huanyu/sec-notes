@@ -25,6 +25,7 @@
 ## 实验：删掉 SESSDATA
 
 - 在 F12 → Application → Cookies 里删除 SESSDATA
-- 刷新后变成未登录
+- 刷新后自动变成未登录
 - 结论：Cookie 是钥匙，服务器表是档案；钥匙丢了进不了门
-- 注意：SESSDATA 带 HttpOnly + Secure + SameSite=Lax
+- 注意：删 Cookie ≠ 退出登录。删 Cookie 只是本地丢钥匙，
+  服务器上的会话仍然有效，必须点「退出登录」才会作废
